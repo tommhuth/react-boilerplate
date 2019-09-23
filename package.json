@@ -1,6 +1,10 @@
 {
     "name": "react-boilerplate",
     "version": "0.0.0",
+    "sideEffects": [
+        "*.scss",
+        "core-js/stable"
+    ],
     "description": "",
     "main": "index.js",
     "scripts": {
