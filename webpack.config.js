@@ -96,6 +96,15 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader
                     },
                     "css-loader", // translates CSS into CommonJS
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            sourceMap: false,
+                            config: {
+                                path: "postcss.config.js"
+                            }
+                        }
+                    },
                     "sass-loader" // compiles Sass to CSS, using Node Sass by default
                 ]
             }
