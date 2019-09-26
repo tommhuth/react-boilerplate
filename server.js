@@ -16,5 +16,5 @@ app.get("/", (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`[${NODE_ENV}] Server ready @ ${PORT}`)
+    console.log(`[${NODE_ENV}] Server ready @ localhost:${PORT}`)
 })

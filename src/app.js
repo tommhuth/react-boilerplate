@@ -13,14 +13,13 @@ ReactDOM.render(
         <div>Hello, world</div>
     </>,
     document.getElementById("root")
-)
-
+) 
 
 if (Config.REGISTER_SERVICEWORKER) {
-    let worker = new Workbox("/serviceworker.js")
-       
+    let worker = new Workbox("/serviceworker.js") 
+
     worker.addEventListener("installed", e => {
         console.info(`Service worker ${e.isUpdate ? "updated" : "installed"}`)
     })
-    worker.register()
+    worker.register() 
 }

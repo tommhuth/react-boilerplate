@@ -11,6 +11,7 @@
     "scripts": {
         "dev": "yarn start & webpack --watch --mode development --config webpack.config.js",
         "start": "node server.js",
+        "lint": "eslint \"**/*.js\" --fix",
         "build": "webpack --mode production --config webpack.config.js"
     },
     "dependencies": {

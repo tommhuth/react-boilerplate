@@ -16,6 +16,17 @@
         "sourceType": "module"
     },
     "rules": {
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": "*", "next": "return" },
+            { "blankLine": "always", "prev": ["const", "let", "var", "import"], "next": "*"},
+            { "blankLine": "always", "prev": "*", "next": ["for", "switch", "if", "try"]},
+            { "blankLine": "always", "prev": "*", "next": "export"},
+            { "blankLine": "always", "prev": "*", "next": "function"},
+            { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]},
+            { "blankLine": "any", "prev": ["import"], "next": ["import"]},
+            { "blankLine": "any", "prev": ["export"], "next": ["export"]}
+        ],
         "no-unused-vars": [
             "error",
             {
