@@ -6,11 +6,16 @@
         "mocha": true,
         "serviceworker": true
     },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "globals": {
         "workbox": true
     },
     "parser": "babel-eslint",
-    "extends": "eslint:recommended",
+    "extends": ["plugin:react/recommended", "eslint:recommended"],
     "parserOptions": {
         "ecmaVersion": 9,
         "sourceType": "module"
@@ -52,9 +57,7 @@
         "semi": [
             "error",
             "never"
-        ],
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
+        ], 
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "off"
     },
