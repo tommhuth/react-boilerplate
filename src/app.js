@@ -1,7 +1,4 @@
-// polyfill
-import "../assets/styles/app.scss"
-
-import "core-js/stable" 
+import "../assets/styles/app.scss" 
 
 import { Workbox } from "workbox-window"
 import React from "react"
@@ -10,7 +7,7 @@ import Config from "./Config"
 
 ReactDOM.render(
     <>
-        <div>Hello, world</div>
+        <h1>Hello, world</h1>
     </>,
     document.getElementById("root")
 ) 
