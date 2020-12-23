@@ -1,19 +1,18 @@
 import "../assets/styles/app.scss"
 
 import { Workbox } from "workbox-window"
-import React from "react"
 import ReactDOM from "react-dom"
 import Config from "./data/Config"
 import useStore from "./data/store"
-import { Heading } from "./utils"
+import { Heading } from "./utils" 
 
 function App() {
     let message = useStore(i => i.message)
 
     return (
         <>
-            <Heading>Hello, world</Heading> 
-            <p>{message}</p>
+            <Heading>Hello, world</Heading>
+            <p>{message}</p> 
         </>
     )
 }
