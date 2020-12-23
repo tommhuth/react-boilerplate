@@ -4,7 +4,7 @@ export function Only(props) {
     return props.if ? <>{props.children}</> : null
 }
 
-// https://medium.com/@Heydon/managing-heading-levels-in-design-systems-18be9a746fa3
+// Source: https://medium.com/@Heydon/managing-heading-levels-in-design-systems-18be9a746fa3
 const Level = React.createContext(1)
 
 export function Section({ children }) {
