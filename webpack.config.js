@@ -78,7 +78,9 @@ module.exports = (env, options) => {
             version: false,
             timings: false,
             children: false,
+            cached: false,
             errors: true,
+            assetsSpace: 1,
         },
         module: {
             rules: [

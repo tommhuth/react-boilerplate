@@ -1,22 +1,30 @@
-import "../assets/styles/app.scss" 
+import "../assets/styles/app.scss"
 
 import { Workbox } from "workbox-window"
 import React from "react"
-import ReactDOM from "react-dom"  
-import Config from "./Config"
+import ReactDOM from "react-dom"
+import Config from "./data/Config"
+import useStore from "./data/store"
+import { Heading } from "./utils"
 
-ReactDOM.render(
-    <>
-        <h1>Hello, world</h1>
-    </>,
-    document.getElementById("root")
-) 
+function App() {
+    let message = useStore(i => i.message)
+
+    return (
+        <>
+            <Heading>Hello, world</Heading> 
+            <p>{message}</p>
+        </>
+    )
+}
+
+ReactDOM.render(<App />, document.getElementById("root"))
 
 if (Config.REGISTER_SERVICEWORKER) {
-    let worker = new Workbox("/serviceworker.js") 
+    let worker = new Workbox("/serviceworker.js")
 
     worker.addEventListener("installed", e => {
         console.info(`Service worker ${e.isUpdate ? "updated" : "installed"}`)
     })
-    worker.register() 
+    worker.register()
 }
