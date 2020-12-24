@@ -1,1 +1,1 @@
-React boilerplate with Webpack, Sass, React, PWA manifest and Workbox service worker. 
+React boilerplate with basic utilities and Webpack, Sass, React, PWA manifest and Workbox service worker. 
