@@ -11,7 +11,8 @@ module.exports = (env, options) => {
     const rev = uuid.v4()
     const plugins = [
         new webpack.DefinePlugin({
-            "process.env.REGISTER_SERVICEWORKER": JSON.stringify(process.env.REGISTER_SERVICEWORKER)
+            "process.env.REGISTER_SERVICEWORKER": JSON.stringify(process.env.REGISTER_SERVICEWORKER),
+            "process.env.BUILD_TIME": JSON.stringify(new Date().toISOString())
         }),
         new MiniCssExtractPlugin({
             filename: "css/[name].[contenthash:6].css"
