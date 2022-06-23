@@ -68,7 +68,7 @@ module.exports = (env, options) => {
     }
 
     return {
-        entry: { app: "./src/app.js" },
+        entry: { app: "./src/root.js" },
         output: {
             path: path.resolve(__dirname, "public"),
             filename: "[name].bundle.[contenthash:6].js",
