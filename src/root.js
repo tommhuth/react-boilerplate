@@ -3,7 +3,7 @@ import "../assets/styles/app.scss"
 import { Workbox } from "workbox-window"
 import { createRoot } from "react-dom/client"
 import Config from "./data/Config"
-import App from "./App2"
+import App from "./App"
 
 const root = createRoot(document.getElementById("root"))
 
