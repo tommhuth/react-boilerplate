@@ -1,4 +1,4 @@
-import { createContext } from "react"
+import { createContext, useEffect, useRef } from "react"
 
 export function Only(props) {
     return props.if ? <>{props.children}</> : null
@@ -25,4 +25,26 @@ export function Heading(props) {
             }}
         </Level.Consumer>
     )
+}
+
+export function useFrame(callback, deps = []) {
+    const requestRef = useRef(0)
+    const previousTimeRef = useRef(0)
+    const animate = (time) => {
+        if (previousTimeRef.current !== undefined) {
+            const deltaTime = time - previousTimeRef.current
+
+            callback(deltaTime)
+        }
+
+        previousTimeRef.current = time
+        requestRef.current = requestAnimationFrame(animate)
+    }
+
+    useEffect(() => {
+        requestRef.current = requestAnimationFrame(animate)
+
+        return () => cancelAnimationFrame(requestRef.current)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, deps)
 }
