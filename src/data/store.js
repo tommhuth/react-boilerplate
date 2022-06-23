@@ -1,11 +1,6 @@
 import create from "zustand"
 
-const store = create(() => ({
-    message: "Hello",
-}))
+const store = create(() => ({}))
+const useStore = store
 
-export function speak() {
-    store.setState({ message: `Hello ${new Date().toLocaleTimeString()}` })
-}
-
-export default store
+export { store, useStore }

@@ -15,14 +15,8 @@
 } 
 
 html {
-    background-color: #FFF;
-}
-
-html, 
-body {
-    height: 100vh;
-    overflow: hidden;
-}
+    background-color: var(--background-color);
+} 
 
 .visually-hidden {
     position: absolute;

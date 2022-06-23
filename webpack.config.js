@@ -1,6 +1,6 @@
 const webpack = require("webpack")
 const path = require("path")
-const uuid = require("uuid")
+const uuid= require("uuid")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const WebpackPwaManifest = require("webpack-pwa-manifest")
